@@ -46,3 +46,26 @@ public class Vowels {
 //     return str.replaceAll("[^aeiouAEIOU]", "").length();
 //   }
 // }
+
+public class FindTheBomb {
+	public static String bomb(String str) {
+		return str.toLowerCase().contains("bomb")? "DUCK!" : "Relax, there's no bomb.";
+	}
+}
+
+public class XO {
+  public static boolean getXO (String str) {
+		if (str.replaceAll("[^xXoO]", "").length() == 0) {
+			return true;
+		}
+		int numX = str.replaceAll("[^xX]", "").length();
+		int numO = str.replaceAll("[^oO]", "").length();
+		return numX == numO? true : false;
+  }
+}
+
+// public class XO {
+//   public static boolean getXO (String str) {
+//     return str.replaceAll("[oO]", "").length() == str.replaceAll("[xX]", "").length();
+//   }
+// }
